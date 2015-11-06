@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #SPECIFIC SETTINGS
+\*------------------------------------*/
+
+/**
+ * Site settings that have specific uses, such as controlling which classes
+ * are output or the design of a particular object or component. Builds on
+ * the series' settings.
+ **/
+
+// Import the series settings
+
+@import "dewnr-series-three/sass/_settings.specific.scss";
+
+
+/* == COMPONENTS == */
+
+/* === ICON-MODULES === */
+
+$sagovau-icon-module-icon-type: subscribe, donate, find;
+
+
+/* === SITE-HEADER === */
+
+@mixin sagovau-site-header-custom-content {
+
+    background-color:   $sagovau-color-brand;
+
+    @include media-query(small-and-up) {
+        background-image:       url("#{$sagovau-path-svg}#{$sagovau-file-prefix}-header-background.svg");
+        background-position:    320px 0;
+        background-repeat:      no-repeat;
+    }
+
+    @include media-query(huge) {
+        background-position: 78.5% 0;   // Manually set to create smooth transition between breakpoints
+    }
+
+}
+
+
+/* === SITEMAP === */
+
+$sagovau-sitemap-background:    "#{$sagovau-path-svg}#{$sagovau-file-prefix}-sitemap-background.svg";
+
+/* === SPOTLIGHT === */
+
+$sagovau-spotlight-image-left-offset:       182px;
+$sagovau-spotlight-overlay-width:           464px;
+$sagovau-spotlight-overlay-padding-right:   100px;

@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #PRIMARY SETTINGS
+\*------------------------------------*/
+
+/**
+ * The site's general settings. Builds on the series' general settings.
+ */
+
+// Import the series settings
+
+@import "dewnr-series-three/sass/_settings.general.scss";
+
+
+
+
+
+/* = File locations and prefixes = */
+
+$sagovau-file-prefix:   "bg";
+
+
+
+
+
+/* = Colours = */
+
+$sagovau-color-brand:                   #00675e;

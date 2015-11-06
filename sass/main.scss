@@ -1,0 +1,174 @@
+/*------------------------------------*\
+    #MAIN
+\*------------------------------------*/
+
+/**
+ * Combine all the SASS components required to compile the main.css file.
+ **/
+
+
+
+
+
+/* = Functions = */
+
+/**
+ * Import these first as they can be used within settings
+ **/
+
+@import "dewnr-bedrock/sass/_functions.color.scss";
+
+
+
+
+
+/* = Settings = */
+
+/* == Main settings == */
+
+@import "_settings.general.scss";
+
+
+/* == Variant settings == */
+
+// Settings that are variations on the main settings
+
+@import "_settings.variants.scss";
+
+
+/* == inuitcss settings == */
+
+@import "inuit-defaults/_settings.defaults.scss";
+@import "_settings.inuitcss.scss";
+
+
+/* == Component-specific setting == */
+
+@import "_settings.specific.scss";
+
+
+
+
+/* = Tools and mixins = */
+
+@import "inuit-functions/_tools.functions.scss";
+@import "inuit-mixins/_tools.mixins.scss";
+@import "inuit-responsive-tools/_tools.responsive.scss";
+@import "inuit-tools-widths/_tools.widths.scss";
+@import "dewnr-bedrock/sass/_tools.mixins.scss";
+
+
+
+
+
+/* = Resets etc. = */
+
+/* == inuitcss == */
+
+@import "inuit-box-sizing/_generic.box-sizing.scss";
+@import "inuit-normalize/_generic.normalize.scss";
+@import "inuit-reset/_generic.reset.scss";
+@import "inuit-shared/_generic.shared.scss";
+
+
+/* == Bedrock == */
+
+@import "dewnr-bedrock/sass/_generic.forms.scss";
+@import "dewnr-bedrock/sass/_generic.iframe.scss";
+
+
+
+
+
+/* = Base styling = */
+
+/* == inuitcss == */
+
+@import "inuit-images/_base.images.scss";
+@import "inuit-lists/_base.lists.scss";
+
+
+/* == Bedrock == */
+
+@import "dewnr-bedrock/sass/_base.blockquote.scss";
+@import "dewnr-bedrock/sass/_base.fonts.scss";
+@import "dewnr-bedrock/sass/_base.forms.scss";
+@import "dewnr-bedrock/sass/_base.headings.scss";
+@import "dewnr-bedrock/sass/_base.main.scss";
+@import "dewnr-bedrock/sass/_base.page.scss";
+
+
+
+
+
+/* = Objects = */
+
+/* == inuitcss == */
+
+@import "inuit-box/_objects.box.scss";
+@import "inuit-layout/_objects.layout.scss";
+@import "inuit-list-bare/_objects.list-bare.scss";
+@import "inuit-list-block/_objects.list-block.scss";
+@import "inuit-list-inline/_objects.list-inline.scss";
+@import "inuit-tables/_objects.tables.scss";
+
+
+/* == Bedrock == */
+
+@import "dewnr-bedrock/sass/_objects.delimited.scss";
+@import "dewnr-bedrock/sass/_objects.fixed-aspect-ratio.scss";
+@import "dewnr-bedrock/sass/_objects.toggle.scss";
+@import "dewnr-bedrock/sass/_objects.wrapper.scss";
+
+
+
+
+
+/* = Components = */
+
+/* == Bedrock == */
+
+@import "dewnr-bedrock/sass/_components.seamless-form.scss";
+
+
+/* == Series three == */
+
+@import "dewnr-series-three/sass/_components.feature-module.scss";
+@import "dewnr-series-three/sass/_components.icon-module.scss";
+@import "dewnr-series-three/sass/_components.image-gallery.scss";
+@import "dewnr-series-three/sass/_components.page-shadow.scss";
+@import "dewnr-series-three/sass/_components.primary-navigation.scss";
+@import "dewnr-series-three/sass/_components.related-information.scss";
+@import "dewnr-series-three/sass/_components.secondary-navigation.scss";
+@import "dewnr-series-three/sass/_components.social.scss";
+@import "dewnr-series-three/sass/_components.slider.scss";
+@import "dewnr-series-three/sass/_components.site-footer.scss";
+@import "dewnr-series-three/sass/_components.site-header.scss";
+@import "dewnr-series-three/sass/_components.site-search.scss";
+@import "dewnr-series-three/sass/_components.sitemap.scss";
+@import "dewnr-series-three/sass/_components.spotlight.scss";
+
+
+/* == Botanic Gardens == */
+
+@import "_components.home.scss";
+@import "_components.small-module.scss";
+
+
+
+
+
+/* = Overrides, etc. = */
+
+/* == inuitcss == */
+
+@import "inuit-clearfix/_trumps.clearfix.scss";
+@import "inuit-spacing/_trumps.spacing.scss";
+@import "inuit-widths/_trumps.widths.scss";
+@import "inuit-responsive-widths/_trumps.widths-responsive.scss";
+
+
+/* == Bedrock == */
+
+@import "dewnr-bedrock/sass/_trumps.display-helpers.scss";
+@import "dewnr-bedrock/sass/_trumps.color-schemes.scss";
