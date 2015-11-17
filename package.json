@@ -1,10 +1,13 @@
 {
+  "name": "dewnr-botanic-gardens",
+  "description": "Responsive site templates for DEWNR's Botanic Gardens website.",
+  "main": "gulpfile.js",
   "private": true,
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "del": "^2.0.2",
-    "dewnr-series-three": "0.2.1",
+    "dewnr-series-three": "^0.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
@@ -23,6 +26,7 @@
     "run-sequence": "^1.1.4",
     "yargs": "^3.29.0"
   },
+  "repository": "dewnr/botanic-gardens",
   "license": "CC-BY-4.0",
   "author": "The DEWNR Internet Team <DEWNR.Internet@sa.gov.au>"
 }

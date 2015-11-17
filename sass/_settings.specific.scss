@@ -10,7 +10,7 @@
 
 // Import the series settings
 
-@import "dewnr-series-three/sass/_settings.specific.scss";
+@import "dewnr-series-three/sass/settings.specific";
 
 
 /* == COMPONENTS == */
@@ -24,12 +24,12 @@ $sagovau-icon-module-icon-type: subscribe, donate, find;
 
 @mixin sagovau-site-header-custom-content {
 
-    background-color:   $sagovau-color-brand;
+    background-color: tint($sagovau-color-brand, 13%);
 
     @include media-query(small-and-up) {
-        background-image:       url("#{$sagovau-path-svg}#{$sagovau-file-prefix}-header-background.svg");
-        background-position:    320px 0;
-        background-repeat:      no-repeat;
+        background-image: url("#{$sagovau-path-svg}#{$sagovau-file-prefix}-header-background.svg");
+        background-position: 320px 0;
+        background-repeat: no-repeat;
     }
 
     @include media-query(huge) {

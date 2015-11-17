@@ -7,16 +7,16 @@
  **/
 
 /*main*/.#{$sagovau-namespace}home {
-    
+
     @include media-query(large-and-up) {
-        padding-bottom:         0;
+        padding-bottom: 0;
     }
-    
+
     @include media-query(huge) {
-        background-image:       url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-homepage-background.svg);
-        background-position:    bottom right;
-        background-repeat:      no-repeat;
-        padding-bottom:         $sagovau-spacing-unit-base--small;
+        background-image: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-homepage-background.svg);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        padding-bottom: $sagovau-spacing-unit-base--small;
     }
-    
+
 }

@@ -12,7 +12,7 @@
 
 // Make sure the "module" extend-only component is included before this content.
 
-@import "dewnr-series-three/sass/_components.module.scss";
+@import "dewnr-series-three/sass/components.module";
 
 
 /*a*/.#{$sagovau-namespace}small-module {
@@ -27,7 +27,7 @@
 
 /*a*/.#{$sagovau-namespace}small-module--separated {
     @include media-query(large-and-up) {
-        margin:     1.5 * $sagovau-spacing-unit-base 0 $sagovau-spacing-unit-base--large 0;
+        margin: (1.5 * $sagovau-spacing-unit-base) 0 $sagovau-spacing-unit-base--large;
     }
 }
 
@@ -36,13 +36,13 @@
         $image-size: 4 * $sagovau-spacing-unit-base;
 
         @include media-query(large-and-up) {
-            background-repeat:  no-repeat;
-            background-size:    cover;
-            border-radius:      2 * $sagovau-spacing-unit-base 0 2 * $sagovau-spacing-unit-base 0;
-            float:              left;
-            height:             $image-size;
-            margin:             0 $sagovau-spacing-unit-base--small;
-            width:              $image-size;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 2 * $sagovau-spacing-unit-base 0;
+            float: left;
+            height: $image-size;
+            margin: 0 $sagovau-spacing-unit-base--small;
+            width: $image-size;
 
         }
 
@@ -51,9 +51,9 @@
     /*div*/.#{$sagovau-namespace}small-module__text {
 
         @include media-query(large-and-up) {
-            color:      $sagovau-color-text-base;
-            overflow:   hidden;     // Create new block formatting context to prevent text from wrapping
-            margin:     0 $sagovau-spacing-unit-base--small;
+            color: $sagovau-color-text-base;
+            overflow: hidden;     // Create new block formatting context to prevent text from wrapping
+            margin: 0 $sagovau-spacing-unit-base--small;
         }
 
     }
@@ -62,9 +62,9 @@
             @extend %#{$sagovau-namespace}module__title;
 
             @include media-query(large-and-up) {
-                border:         none;
+                border: 0;
                 @include inuit-font-size($sagovau-font-size-base);
-                font-weight:    bold;
-                padding:        0;
+                font-weight: bold;
+                padding: 0;
             }
         }

@@ -16,7 +16,7 @@
  * Import these first as they can be used within settings
  **/
 
-@import "dewnr-bedrock/sass/_functions.color.scss";
+@import "dewnr-bedrock/sass/functions.color";
 
 
 
@@ -26,36 +26,36 @@
 
 /* == Main settings == */
 
-@import "_settings.general.scss";
+@import "settings.general";
 
 
 /* == Variant settings == */
 
 // Settings that are variations on the main settings
 
-@import "_settings.variants.scss";
+@import "settings.variants";
 
 
 /* == inuitcss settings == */
 
-@import "inuit-defaults/_settings.defaults.scss";
-@import "_settings.inuitcss.scss";
+@import "inuit-defaults/settings.defaults";
+@import "settings.inuitcss";
 
 
 /* == Component-specific setting == */
 
-@import "_settings.specific.scss";
+@import "settings.specific";
 
 
 
 
 /* = Tools and mixins = */
 
-@import "inuit-functions/_tools.functions.scss";
-@import "inuit-mixins/_tools.mixins.scss";
-@import "inuit-responsive-tools/_tools.responsive.scss";
-@import "inuit-tools-widths/_tools.widths.scss";
-@import "dewnr-bedrock/sass/_tools.mixins.scss";
+@import "inuit-functions/tools.functions";
+@import "inuit-mixins/tools.mixins";
+@import "inuit-responsive-tools/tools.responsive";
+@import "inuit-tools-widths/tools.widths";
+@import "dewnr-bedrock/sass/tools.mixins";
 
 
 
@@ -65,16 +65,16 @@
 
 /* == inuitcss == */
 
-@import "inuit-box-sizing/_generic.box-sizing.scss";
-@import "inuit-normalize/_generic.normalize.scss";
-@import "inuit-reset/_generic.reset.scss";
-@import "inuit-shared/_generic.shared.scss";
+@import "inuit-box-sizing/generic.box-sizing";
+@import "inuit-normalize/generic.normalize";
+@import "inuit-reset/generic.reset";
+@import "inuit-shared/generic.shared";
 
 
 /* == Bedrock == */
 
-@import "dewnr-bedrock/sass/_generic.forms.scss";
-@import "dewnr-bedrock/sass/_generic.iframe.scss";
+@import "dewnr-bedrock/sass/generic.forms";
+@import "dewnr-bedrock/sass/generic.iframe";
 
 
 
@@ -84,18 +84,18 @@
 
 /* == inuitcss == */
 
-@import "inuit-images/_base.images.scss";
-@import "inuit-lists/_base.lists.scss";
+@import "inuit-images/base.images";
+@import "inuit-lists/base.lists";
 
 
 /* == Bedrock == */
 
-@import "dewnr-bedrock/sass/_base.blockquote.scss";
-@import "dewnr-bedrock/sass/_base.fonts.scss";
-@import "dewnr-bedrock/sass/_base.forms.scss";
-@import "dewnr-bedrock/sass/_base.headings.scss";
-@import "dewnr-bedrock/sass/_base.main.scss";
-@import "dewnr-bedrock/sass/_base.page.scss";
+@import "dewnr-bedrock/sass/base.blockquote";
+@import "dewnr-bedrock/sass/base.fonts";
+@import "dewnr-bedrock/sass/base.forms";
+@import "dewnr-bedrock/sass/base.headings";
+@import "dewnr-bedrock/sass/base.main";
+@import "dewnr-bedrock/sass/base.page";
 
 
 
@@ -105,20 +105,20 @@
 
 /* == inuitcss == */
 
-@import "inuit-box/_objects.box.scss";
-@import "inuit-layout/_objects.layout.scss";
-@import "inuit-list-bare/_objects.list-bare.scss";
-@import "inuit-list-block/_objects.list-block.scss";
-@import "inuit-list-inline/_objects.list-inline.scss";
-@import "inuit-tables/_objects.tables.scss";
+@import "inuit-box/objects.box";
+@import "inuit-layout/objects.layout";
+@import "inuit-list-bare/objects.list-bare";
+@import "inuit-list-block/objects.list-block";
+@import "inuit-list-inline/objects.list-inline";
+@import "inuit-tables/objects.tables";
 
 
 /* == Bedrock == */
 
-@import "dewnr-bedrock/sass/_objects.delimited.scss";
-@import "dewnr-bedrock/sass/_objects.fixed-aspect-ratio.scss";
-@import "dewnr-bedrock/sass/_objects.toggle.scss";
-@import "dewnr-bedrock/sass/_objects.wrapper.scss";
+@import "dewnr-bedrock/sass/objects.delimited";
+@import "dewnr-bedrock/sass/objects.fixed-aspect-ratio";
+@import "dewnr-bedrock/sass/objects.toggle";
+@import "dewnr-bedrock/sass/objects.wrapper";
 
 
 
@@ -128,31 +128,32 @@
 
 /* == Bedrock == */
 
-@import "dewnr-bedrock/sass/_components.seamless-form.scss";
+@import "dewnr-bedrock/sass/components.seamless-form";
 
 
 /* == Series three == */
 
-@import "dewnr-series-three/sass/_components.feature-module.scss";
-@import "dewnr-series-three/sass/_components.icon-module.scss";
-@import "dewnr-series-three/sass/_components.image-gallery.scss";
-@import "dewnr-series-three/sass/_components.page-shadow.scss";
-@import "dewnr-series-three/sass/_components.primary-navigation.scss";
-@import "dewnr-series-three/sass/_components.related-information.scss";
-@import "dewnr-series-three/sass/_components.secondary-navigation.scss";
-@import "dewnr-series-three/sass/_components.social.scss";
-@import "dewnr-series-three/sass/_components.slider.scss";
-@import "dewnr-series-three/sass/_components.site-footer.scss";
-@import "dewnr-series-three/sass/_components.site-header.scss";
-@import "dewnr-series-three/sass/_components.site-search.scss";
-@import "dewnr-series-three/sass/_components.sitemap.scss";
-@import "dewnr-series-three/sass/_components.spotlight.scss";
+@import "dewnr-series-three/sass/components.feature-module";
+@import "dewnr-series-three/sass/components.icon-module";
+@import "dewnr-series-three/sass/components.image-gallery";
+@import "dewnr-series-three/sass/components.page-shadow";
+@import "dewnr-series-three/sass/components.primary-navigation";
+@import "dewnr-series-three/sass/components.related-information";
+@import "dewnr-series-three/sass/components.secondary-navigation";
+@import "dewnr-series-three/sass/components.social";
+@import "dewnr-series-three/sass/components.slider";
+@import "dewnr-series-three/sass/components.site-footer";
+@import "dewnr-series-three/sass/components.site-header";
+@import "dewnr-series-three/sass/components.site-search";
+@import "dewnr-series-three/sass/components.sitemap";
+@import "dewnr-series-three/sass/components.spotlight";
 
 
 /* == Botanic Gardens == */
 
-@import "_components.home.scss";
-@import "_components.small-module.scss";
+@import "components.home";
+@import "components.small-module";
+@import "components.site-footer";
 
 
 
@@ -162,13 +163,13 @@
 
 /* == inuitcss == */
 
-@import "inuit-clearfix/_trumps.clearfix.scss";
-@import "inuit-spacing/_trumps.spacing.scss";
-@import "inuit-widths/_trumps.widths.scss";
-@import "inuit-responsive-widths/_trumps.widths-responsive.scss";
+@import "inuit-clearfix/trumps.clearfix";
+@import "inuit-spacing/trumps.spacing";
+@import "inuit-widths/trumps.widths";
+@import "inuit-responsive-widths/trumps.widths-responsive";
 
 
 /* == Bedrock == */
 
-@import "dewnr-bedrock/sass/_trumps.display-helpers.scss";
-@import "dewnr-bedrock/sass/_trumps.color-schemes.scss";
+@import "dewnr-bedrock/sass/trumps.display-helpers";
+@import "dewnr-bedrock/sass/trumps.color-schemes";
