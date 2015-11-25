@@ -15,25 +15,32 @@
 
 /* == COMPONENTS == */
 
+/* === FOOTER === */
+
+$sagovau-enable-footer--brand-secondary: true;
+
+
 /* === ICON-MODULES === */
 
-$sagovau-icon-module-icon-type: subscribe, donate, find;
+$sagovau-icon-module-icon-type: news, donate, find;
 
 
 /* === SITE-HEADER === */
+
+$sagovau-site-header-logo-height: 120px;
 
 @mixin sagovau-site-header-custom-content {
 
     background-color: tint($sagovau-color-brand, 13%);
 
     @include media-query(small-and-up) {
-        background-image: url("#{$sagovau-path-svg}#{$sagovau-file-prefix}-header-background.svg");
+        background-image: url("../images/#{$sagovau-path-svg}#{$sagovau-file-prefix}-header-background.svg");
         background-position: 320px 0;
         background-repeat: no-repeat;
     }
 
     @include media-query(huge) {
-        background-position: 78.5% 0;   // Manually set to create smooth transition between breakpoints
+        background-position: 100% 0;   // Manually set to create smooth transition between breakpoints
     }
 
 }
@@ -41,10 +48,10 @@ $sagovau-icon-module-icon-type: subscribe, donate, find;
 
 /* === SITEMAP === */
 
-$sagovau-sitemap-background:    "#{$sagovau-path-svg}#{$sagovau-file-prefix}-sitemap-background.svg";
+$sagovau-sitemap-background: "#{$sagovau-path-svg}#{$sagovau-file-prefix}-sitemap-background.svg";
 
 /* === SPOTLIGHT === */
 
-$sagovau-spotlight-image-left-offset:       182px;
-$sagovau-spotlight-overlay-width:           464px;
-$sagovau-spotlight-overlay-padding-right:   100px;
+$sagovau-spotlight-image-left-offset: 182px;
+$sagovau-spotlight-overlay-width: 464px;
+$sagovau-spotlight-overlay-padding-right: 100px;

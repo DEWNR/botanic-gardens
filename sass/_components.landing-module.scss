@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    #LANDING-MODULE
+\*------------------------------------*/
+
+/**
+ * Styling for the Botanic Gardens small modules.
+ *
+ * Note that the "module" component can only be imported once, so importing it
+ * in multiple files does not cause duplication.
+ **/
+
+
+// Make sure the "module" extend-only component is included before this content.
+
+@import "dewnr-series-three/sass/components.module";
+
+
+/*a*/.#{$sagovau-namespace}landing-module {
+    @extend %#{$sagovau-namespace}clearfix;
+    @extend %#{$sagovau-namespace}module;
+
+    @include media-query(large-and-up) {
+        margin-bottom: $sagovau-spacing-unit-base--small;
+    }
+
+}
+
+/*a*/.#{$sagovau-namespace}landing-module--separated {
+    @include media-query(large-and-up) {
+        margin: (1.5 * $sagovau-spacing-unit-base) 0 $sagovau-spacing-unit-base--large;
+    }
+}
+
+
+    /*div*/.#{$sagovau-namespace}landing-module__image { // Use a div instead of img to prevent download on mobile
+        $image-size: 4 * $sagovau-spacing-unit-base;
+
+        @include media-query(large-and-up) {
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 2 * $sagovau-spacing-unit-base 0;
+            float: left;
+            height: $image-size;
+            margin: 0 $sagovau-spacing-unit-base--small;
+            width: $image-size;
+
+        }
+
+    }
+
+    /*div*/.#{$sagovau-namespace}landing-module__text {
+
+        @include media-query(large-and-up) {
+            color: $sagovau-color-text-base;
+            overflow: hidden;     // Create new block formatting context to prevent text from wrapping
+            margin: 0 $sagovau-spacing-unit-base--small;
+        }
+
+    }
+
+        /*h2*/.#{$sagovau-namespace}landing-module__title {
+            @extend %#{$sagovau-namespace}module__title;
+
+            @include media-query(large-and-up) {
+                border: 0;
+                @include inuit-font-size($sagovau-font-size-base);
+                font-weight: bold;
+                padding: 0;
+            }
+        }
