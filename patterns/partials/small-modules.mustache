@@ -1,0 +1,32 @@
+
+        <ul class="layout  layout--small">
+
+            {{#smallModules}}
+
+                <li class="layout__item{{ class }}  u-1-of-3-large-and-up">
+
+                    <a class="small-module  small-module--separated  small-module--index-{{ index }}" href="{{ href }}">
+
+                        <!-- Hide the image's parent element to prevent it from being downloaded -->
+
+                        <div class="u-hidden  u-display-block-large-and-up">
+
+                            <div class="small-module__image    u-hidden  u-display-block-large-and-up" style="background-image: url({{ image }});"></div>
+
+                        </div>
+
+                        <div class="small-module__text">
+
+                            <h2 class="small-module__title">{{ title }}</h2>
+
+                            <span class="u-hidden  u-display-block-large-and-up">{{ text }}</span>
+
+                        </div>
+
+                    </a><!-- /.small-module -->
+
+                </li><!-- /.layout item -->
+
+            {{/smallModules}}
+
+        </ul>

@@ -1,0 +1,24 @@
+[
+    {
+        "index": "0",
+        "title": "What;s happening",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "class": "",
+        "image": "http://lorempixel.com/160/160/nature/7",
+        "href": "#"
+    },{
+        "index": "1",
+        "title": "Latest blog",
+        "text": "Proin posuere turpis felis, vel dapibus sem vulputate non.",
+        "class": "",
+        "image": "http://lorempixel.com/160/160/nature/8",
+        "href": "#"
+    },{
+        "index": "2",
+        "title": "Fundraising",
+        "text": "Etiam convallis ante eget augue ullamcorper.",
+        "class": "",
+        "image": "http://lorempixel.com/160/160/nature/3",
+        "href": "#"
+    }
+]

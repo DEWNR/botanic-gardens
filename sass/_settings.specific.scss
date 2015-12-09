@@ -34,7 +34,7 @@ $sagovau-site-header-logo-height: 120px;
     background-color: tint($sagovau-color-brand, 13%);
 
     @include media-query(small-and-up) {
-        background-image: url("../images/#{$sagovau-path-svg}#{$sagovau-file-prefix}-header-background.svg");
+        background-image: url("#{$sagovau-path-svg}#{$sagovau-file-prefix}-header-background.svg");
         background-position: 320px 0;
         background-repeat: no-repeat;
     }

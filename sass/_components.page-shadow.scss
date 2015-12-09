@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #PAGE-SHADOW
+\*------------------------------------*/
+
+/**
+ * Add a drop-shadow to the page on the Alpha series of sites.
+ */
+
+/**
+ * 1. Ensure children are positioned relative to the footer
+ **/
+
+$sagovau-page-shadow-bottom-center: url(http://www.environment.sa.gov.au#{$sagovau-path-shared}alpha-page-shadow-bottom-center.png);
+$sagovau-page-shadow-bottom-left: url(http://www.environment.sa.gov.au#{$sagovau-path-shared}alpha-page-shadow-bottom-left.png);
+$sagovau-page-shadow-bottom-right: url(http://www.environment.sa.gov.au#{$sagovau-path-shared}alpha-page-shadow-bottom-right.png);
+$sagovau-page-shadow-top-left: url(http://www.environment.sa.gov.au#{$sagovau-path-shared}alpha-page-shadow-top-left.png);
+$sagovau-page-shadow-top-right: url(http://www.environment.sa.gov.au#{$sagovau-path-shared}alpha-page-shadow-top-right.png);
+
+
+/*div*/.#{$sagovau-namespace}page-shadow {
+
+    @include media-query(large-and-up) {
+        background-image: $sagovau-page-shadow-bottom-left, $sagovau-page-shadow-bottom-right, $sagovau-page-shadow-bottom-center, $sagovau-page-shadow-top-right, $sagovau-page-shadow-top-left;
+        background-repeat: no-repeat, no-repeat, repeat-x, repeat-y, repeat-y;
+        background-position: bottom left, bottom right, bottom, top right, top left;
+    }
+
+}

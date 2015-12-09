@@ -22,6 +22,7 @@ var _ = require('lodash'),
     minifyCss = require('gulp-minify-css'),     // Minify CSS
     minifyCssOptions,
     rashtache,
+    rashtacheConfig,
     mustache = require('gulp-mustache-plus'),
     mustachify,
     data,
@@ -106,6 +107,15 @@ htmlminOptions = {
     minifyJS: true,
     minifyCSS: true
 };
+
+
+
+rashtacheConfig = {
+    site_prefix: 'bg',
+    image_path: 'images/',
+    share_path: 'http://www.environment.sa.gov.au/files/templates/00000000-0000-0000-0000-000000000000/f88a7f3c-df7e-430a-825c-24cfa8dec9a8/'
+};
+
 
 
 imageminOptions = {
@@ -254,8 +264,7 @@ rashtache = function (folders) {
 
 // Load the data, starting the the furthest ancestor
 data = rashtache([paths.src.remotePatterns, paths.src.html]);
-
-
+data.json = _.merge(data.json, rashtacheConfig);
 
 
 
@@ -289,6 +298,7 @@ gulp.task('html', function () {
         });
     } else {
         data = rashtache([paths.src.remotePatterns, paths.src.html]);
+        data.json = _.merge(data.json, rashtacheConfig);
 
         return gulp.src(paths.src.html + '**/*.html')
             // Load the data, starting the the furthest ancestor
