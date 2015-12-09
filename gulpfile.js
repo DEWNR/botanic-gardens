@@ -1,7 +1,8 @@
 /*jshint node:true*/
 'use strict';
 
-var argv = require('yargs').argv,   // Pass agruments using the command line
+var _ = require('lodash'),
+    argv = require('yargs').argv,   // Pass agruments using the command line
     autoprefixer = require('gulp-autoprefixer'),    // Add vendor prefixes to CSS
     autoprefixerOptions,
     browserSync = require('browser-sync').create(),     // Automatically refresh the browser
@@ -20,9 +21,10 @@ var argv = require('yargs').argv,   // Pass agruments using the command line
     jsList,   // List of JavaScripts to combine
     minifyCss = require('gulp-minify-css'),     // Minify CSS
     minifyCssOptions,
+    rashtache,
     mustache = require('gulp-mustache-plus'),
-    mustacheData,
-    mustachePartials,
+    mustachify,
+    data,
     passthrough = require('gulp-empty'),    // Pass through an unaltered stream; useful for conditional processing
     paths,  // Frequently used file paths
     rename = require('gulp-rename'), // Rename output files
@@ -65,7 +67,7 @@ var argv = require('yargs').argv,   // Pass agruments using the command line
 
     paths.src.root = src;
 
-    paths.src.html = src + "html/";
+    paths.src.html = src + "patterns/";
 
     paths.src.images = src + "images/";
 
@@ -73,7 +75,7 @@ var argv = require('yargs').argv,   // Pass agruments using the command line
 
     paths.src.sass = src + "sass/";
 
-    paths.src.templates = "./node_modules/dewnr-series-three/templates/";
+    paths.src.remotePatterns = "./node_modules/dewnr-series-three/patterns";
 
 }());
 
@@ -180,63 +182,6 @@ jsList = [
 
 
 
-// Define Mustache data and partials
-
-mustacheData = {
-  "file_path": "http://www.environment.sa.gov.au/files/templates/00000000-0000-0000-0000-000000000000/f88a7f3c-df7e-430a-825c-24cfa8dec9a8",
-  "site_url": "http://www.environment.sa.gov.au",
-  "feature-modules": [
-    {
-      "feature-module-url": "#",
-      "feature-module-title": "Feature Title 1"
-    },{
-      "feature-module-url": "#",
-      "feature-module-title": "Feature Title 2"
-    },{
-      "feature-module-url": "#",
-      "feature-module-title": "Feature Title 3"
-    }
-],
-  "navigation-tiles": [
-    {
-      "navigation-tile-url": "#",
-      "navigation-tile-title": "Navigation Title 1",
-      "navigation-tile-teaser": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    },{
-      "navigation-tile-url": "#",
-      "navigation-tile-title": "Navigation Title 2",
-      "navigation-tile-teaser": "Nam id nibh ac lacus molestie consequat. Nunc vel arcu at nisl volutpat mollis a id sem."
-    },{
-      "navigation-tile-url": "#",
-      "navigation-tile-title": "Navigation Title 3",
-      "navigation-tile-teaser": "Donec ante justo, scelerisque eget mauris id"
-    },{
-      "navigation-tile-url": "#",
-      "navigation-tile-title": "Navigation Title 4",
-      "navigation-tile-teaser": "Nunc vel arcu at nisl volutpat mollis a id sem."
-    }
-  ]
-};
-
-mustachePartials = {
-  "_header": paths.src.templates + "partials/_header.mustache",
-  "_footer": paths.src.templates + "partials/_footer.mustache",
-  "feature-modules": paths.src.templates + "partials/feature-module.mustache",
-  "navigation-tiles": paths.src.templates + "partials/navigation-tile.mustache",
-  "site-header": paths.src.templates + "partials/site-header.mustache",
-  "primary-navigation": paths.src.templates + "partials/primary-navigation.mustache",
-  "secondary-navigation": paths.src.templates + "partials/secondary-navigation.mustache",
-  "site-footer": paths.src.templates + "partials/site-footer.mustache",
-  "social": paths.src.templates + "partials/social.mustache",
-  "site-search": paths.src.templates + "partials/site-search.mustache",
-  "sitemap": paths.src.templates + "partials/sitemap.mustache"
-};
-
-
-
-
-
-
 // Redefine some optimisation processes so they're not used in development
 
 if (!argv.production) {
@@ -247,6 +192,68 @@ if (!argv.production) {
     rev.manifest = passthrough;
     uglify = passthrough;
 }
+
+
+
+
+
+// Setup rastache function
+
+rashtache = function (folders) {
+    return folders.reduce(function (prevObject, folder) {
+        var objectify;
+
+        objectify = function (folder) {
+            var files = fs.readdirSync(folder);
+
+            // Read and combine all the files in the folder
+            return files.reduce(function (object, file) {
+                var filePath = folder + '/' + file,
+                    isFolder,
+                    isJSON,
+                    property,
+                    toCamelCase,
+                    value;
+
+                // Convert file/folder names to camelCase (assumimg names only
+                // use lowercase letters or dashes)
+                toCamelCase = function(string) {
+                    string = string.replace(/\.(mustache|json)$/, '');
+                    string = string.replace(/(\-)(\w)/g, function (match, dash, letter) {
+                        return letter.toUpperCase();
+                    });
+                    return string;
+                };
+
+                // Set the property name
+                property = toCamelCase(file);
+
+                // Check to see if the 'file' is actually a directory
+                if (fs.statSync(filePath).isDirectory()) {
+                    // Recursively process it
+                    value = objectify(filePath);
+                } else {
+                    // Read the file
+                    value = fs.readFileSync(filePath, 'utf-8');
+
+                    // Parse and merge the file if it's JSON, otherwise add the value to the object
+                    if ((/\.json$/).test(filePath)) {
+                        value = JSON.parse(value);
+                    }
+                }
+
+                object[property] = value;
+                return object;
+            }, {});
+        };
+
+        // Process the current folder and merge it with the object
+        return _.merge(prevObject, objectify(folder));
+    }, {});
+};
+
+// Load the data, starting the the furthest ancestor
+data = rashtache([paths.src.remotePatterns, paths.src.html]);
 
 
 
@@ -263,17 +270,6 @@ gulp.task('clean', function () {
 });
 
 
-
-// Create Mustache template files
-
-gulp.task('mustache', function () {
-  gulp.src(paths.src.templates + "*.mustache")
-      .pipe(mustache(
-        mustacheData,
-        {},
-        mustachePartials
-      )).pipe(gulp.dest(paths.dest));
-});
 
 
 
@@ -292,8 +288,11 @@ gulp.task('html', function () {
             message: 'Error: a manifest must be present when running this task in production mode'
         });
     } else {
+        data = rashtache([paths.src.remotePatterns, paths.src.html]);
+
         return gulp.src(paths.src.html + '**/*.html')
-            .pipe(mustache(mustacheData, {}, mustachePartials))
+            // Load the data, starting the the furthest ancestor
+            .pipe(mustache(data.json, {}, data.partials))
             .pipe(fingerprint(manifest, fingerprintOptions))
             .pipe(htmlmin(htmlminOptions))
             .pipe(gulp.dest(paths.dest));
