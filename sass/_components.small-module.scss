@@ -1,0 +1,22 @@
+/*div*/.#{$sagovau-namespace}small-module__image { // Use a div instead of img to prevent download on mobile
+
+    @include media-query(large-and-up) {
+
+        /*a*/.#{$sagovau-namespace}small-module--index-0 & {
+            border-radius: 0 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+        }
+
+        /*a*/.#{$sagovau-namespace}small-module--index-2 & {
+            border-radius: $sagovau-spacing-unit-base 0 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+        }
+
+        /*a*/.#{$sagovau-namespace}small-module--index-3 & {
+            border-radius: 0 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+        }
+
+        /*a*/.#{$sagovau-namespace}small-module--index-5 & {
+            border-radius: $sagovau-spacing-unit-base 0 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+        }
+    }
+
+}
