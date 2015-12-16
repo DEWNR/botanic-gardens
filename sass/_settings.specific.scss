@@ -55,3 +55,11 @@ $sagovau-sitemap-background: "#{$sagovau-path-svg}#{$sagovau-file-prefix}-sitema
 $sagovau-spotlight-image-left-offset: 182px;
 $sagovau-spotlight-overlay-width: 464px;
 $sagovau-spotlight-overlay-padding-right: 100px;
+
+nav,
+article,
+aside,
+.secondary-navigation__item,
+.related-information {
+    font-size: 1rem;
+}
