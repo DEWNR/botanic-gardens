@@ -1,0 +1,38 @@
+[
+    {
+        "title": "This is the title",
+        "tiles": [
+            {
+                "title": "Lorem ipsum dolor sit",
+                "class": "",
+                "text": "Etiam eget faucibus nunc. Nam egestas congue tempus",
+                "image": "http://lorempixel.com/632/482/nature/4",
+                "href": "#"
+            },{
+                "title": "Consectetur adipiscing",
+                "class": "",
+                "text": "Sed ac ornare diam. Quisque tincidunt eu dolor nec venenatis",
+                "image": "http://lorempixel.com/632/482/nature/5",
+                "href": "#"
+            },{
+                "title": "Sed rutrum congue",
+                "class": "",
+                "text": "Vivamus pretium turpis ac scelerisque finibus",
+                "image": "http://lorempixel.com/632/482/nature/6",
+                "href": "#"
+            },{
+                "title": "Mauris vestibulum erat",
+                "class": "",
+                "text": "Integer fringilla scelerisque tortor. Etiam sollicitudin congue felis",
+                "image": "http://lorempixel.com/632/482/nature/1",
+                "href": "#"
+            },{
+                "title": "Ut dignissim ultrices nunc",
+                "class": "",
+                "text": "Class aptent taciti sociosqu ad litora torquent",
+                "image": "http://lorempixel.com/632/482/nature/2",
+                "href": "#"
+            }
+        ]
+    }
+]
