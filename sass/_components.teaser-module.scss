@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    #TEASER-MODULE
+\*------------------------------------*/
+
+/**
+ * Styling for the Botanic Gardens teaser modules.
+ *
+ * Note that the "module" component can only be imported once, so importing it
+ * in multiple files does not cause duplication.
+ **/
+
+
+// Make sure the "module" extend-only component is included before this content.
+
+@import "dewnr-series-three/sass/components.module";
+
+
+/*a*/.#{$sagovau-namespace}teaser-module {
+    @extend %#{$sagovau-namespace}module;
+    border: 0;
+    margin-bottom: $sagovau-spacing-unit-base;
+    padding-bottom: $sagovau-spacing-unit-base;
+    border-bottom: 1px dotted $sagovau-color-brand;
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+
+    @include media-query(large-and-up) {
+        margin-bottom: $sagovau-spacing-unit-base;
+    }
+
+}
+
+    /*div*/.#{$sagovau-namespace}teaser-module__image {    // Use a div instead of img to prevent download on mobile
+        position: relative;
+        margin-bottom: $sagovau-spacing-unit-base;
+        display: block;
+        @include ui-link;       // Underline on hover/focus
+
+        @include media-query(large-and-up) {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 0;
+            padding-bottom: (128 / 632) * 100%; // Manually calculated based on the required dimensions
+        }
+
+    }
+
+    /*h2*/.#{$sagovau-namespace}teaser-module__title {
+        @extend %#{$sagovau-namespace}module__title;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            text-decoration: inherit;
+        }
+
+        @include media-query(large-and-up) {
+            background-color: #000;  // Fallback for non-RGBA browsers
+            background-color: rgba(0, 0, 0, 0.7);
+            border-bottom-style: none;
+            bottom: 0;
+            color: $sagovau-color-text-reverse;
+            left: 0;
+            padding: $sagovau-spacing-unit-base--small;
+            position: absolute;
+            width: 100%;
+        }
+
+        /*div*/.#{$sagovau-namespace}teaser-module__image & {
+            text-decoration: inherit;
+        }
+    }
+
+
+    /*a*/.#{$sagovau-namespace}teaser-module__readmore {
+        font-weight: bold;
+        margin-left: $sagovau-spacing-unit-base;
+
+        &::before {
+            background-image: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-circle-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            display: inline-block;
+            height: $sagovau-font-size-base;
+            margin-left: -$sagovau-spacing-unit-base;
+            margin-right: $sagovau-spacing-unit-base - $sagovau-font-size-base;
+            vertical-align: middle;
+            width: $sagovau-font-size-base;
+        }
+    }
