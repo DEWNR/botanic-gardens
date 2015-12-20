@@ -7,7 +7,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "del": "^2.0.2",
-    "dewnr-series-three": "^0.2.3",
+    "dewnr-series-three": "^0.2.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
