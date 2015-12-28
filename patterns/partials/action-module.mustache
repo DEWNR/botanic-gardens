@@ -1,0 +1,19 @@
+
+{{#actionModules}}
+    <div class="action-module">
+
+      <h2 class="action-module__title">{{ title }}</h2>
+
+      <ul class="action-module__list">
+
+        {{#links}}
+          <li class="action-module__item">
+            <a class="action-module__link" href="{{ href }}" target="_self">{{ title }}</a>
+          </li>
+          <!-- Separate list items so they can be justified -->
+        {{/links}}
+
+      </ul>
+
+    </div>
+{{/actionModules}}

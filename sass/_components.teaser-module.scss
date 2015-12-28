@@ -38,11 +38,16 @@
         margin-bottom: $sagovau-spacing-unit-base;
         display: block;
         @include ui-link;       // Underline on hover/focus
+        padding-bottom: (128 / 632) * 100%; // Manually calculated based on the required dimensions
 
         @include media-query(large-and-up) {
             background-repeat: no-repeat;
             background-size: cover;
             height: 0;
+            padding-bottom: (150 / 632) * 100%; // Manually calculated based on the required dimensions
+        }
+
+        @include media-query(huge) {
             padding-bottom: (128 / 632) * 100%; // Manually calculated based on the required dimensions
         }
 

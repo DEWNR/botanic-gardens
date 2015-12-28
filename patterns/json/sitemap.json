@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Our places",
+        "links": [
+            {
+                "title": "Adelaide Gaol",
+                "href": "http://www.environment.sa.gov.au/adelaidegaol/Home"
+            }, {
+                "title": "Cleland Wildlife Park",
+                "href": "http://www.environment.sa.gov.au/clelandwildlife/Home"
+            },{
+                "title": "Naracoorte Caves",
+                "href": "http://www.environment.sa.gov.au/naracoorte/Home"
+            },{
+                "title": "State Flora",
+                "href": "http://www.stateflora.sa.gov.au/home"
+            },{
+                "title": "Tantanoola Caves",
+                "href": "http://www.environment.sa.gov.au/parks/Find_a_Park/Browse_by_region/Limestone_Coast/Tantanoola_Caves_Conservation_Park"
+            }
+        ]
+    }, {
+        "title": "Our Regions",
+        "links": [
+            {
+                "title": "Adelaide & Mt Lofty Ranges",
+                "href": "http://www.naturalresources.sa.gov.au/adelaidemtloftyranges/home"
+            }, {
+                "title": "Alinytjara Wilurara",
+                "href": "http://www.naturalresources.sa.gov.au/alinytjara-wilurara/home"
+            }, {
+                "title": "Eyre Peninsula",
+                "href": "http://www.naturalresources.sa.gov.au/eyrepeninsula/home"
+            }, {
+                "title": "Kangaroo Island",
+                "href": "http://www.naturalresources.sa.gov.au/kangarooisland/home"
+            }, {
+                "title": "Northern & Yorke",
+                "href": "http://www.naturalresources.sa.gov.au/northernandyorke/home"
+            }, {
+                "title": "SA Arid Lands",
+                "href": "http://www.naturalresources.sa.gov.au/aridlands/home"
+            }, {
+                "title": "SA Murray-Darling Basin",
+                "href": "http://www.naturalresources.sa.gov.au/samurraydarlingbasin/home"
+            }, {
+                "title": "South East",
+                "href": "http://www.naturalresources.sa.gov.au/southeast/home"
+            }
+        ]
+    }
+]

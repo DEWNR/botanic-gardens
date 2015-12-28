@@ -1,0 +1,29 @@
+
+        <nav class="sitemap">
+
+            <ul class="sitemap__collection  sitemap__collection--separated">
+
+                {{#sitemap}}
+
+                    <li class="sitemap__group    hidden large-and-up-display-inline-block">
+
+                        <h2 class="sitemap__title">{{ title }}</h2>
+
+                        <ul class="sitemap__list">
+
+                            {{#links}}
+
+                                <li><a class="sitemap__link" href="{{ href }}" target="_blank" title="{{ title }}">{{ title }}</a></li>
+
+                            {{/links}}
+
+                        </ul><!-- /.sitemap__list -->
+                        
+                    </li><!-- /.sitemap__group -->
+
+                {{/sitemap}}
+
+
+            </ul><!-- /.sitemap__collection -->
+
+        </nav><!-- /.sitemap -->

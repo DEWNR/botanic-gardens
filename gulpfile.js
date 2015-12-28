@@ -263,7 +263,7 @@ rashtache = function (folders) {
 };
 
 // Load the data, starting the the furthest ancestor
-data = rashtache([paths.src.remotePatterns, paths.src.html]);
+data = rashtache([paths.src.html]);
 data.json = _.merge(data.json, rashtacheConfig);
 
 
@@ -297,7 +297,7 @@ gulp.task('html', function () {
             message: 'Error: a manifest must be present when running this task in production mode'
         });
     } else {
-        data = rashtache([paths.src.remotePatterns, paths.src.html]);
+        data = rashtache([paths.src.html]);
         data.json = _.merge(data.json, rashtacheConfig);
 
         return gulp.src(paths.src.html + '**/*.html')
