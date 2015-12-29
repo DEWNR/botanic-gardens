@@ -34,21 +34,21 @@
 }
 
     /*div*/.#{$sagovau-namespace}teaser-module__image {    // Use a div instead of img to prevent download on mobile
+        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
         margin-bottom: $sagovau-spacing-unit-base;
         display: block;
         @include ui-link;       // Underline on hover/focus
-        padding-bottom: (128 / 632) * 100%; // Manually calculated based on the required dimensions
+        padding-bottom: (100 / 620) * 100%; // Manually calculated based on the required dimensions
 
         @include media-query(large-and-up) {
-            background-repeat: no-repeat;
-            background-size: cover;
             height: 0;
-            padding-bottom: (150 / 632) * 100%; // Manually calculated based on the required dimensions
+            padding-bottom: (140 / 620) * 100%; // Manually calculated based on the required dimensions
         }
 
         @include media-query(huge) {
-            padding-bottom: (128 / 632) * 100%; // Manually calculated based on the required dimensions
+            padding-bottom: (125 / 620) * 100%; // Manually calculated based on the required dimensions
         }
 
     }
