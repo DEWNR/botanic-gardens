@@ -1,7 +1,23 @@
             {{#article}}
 
-                <h1>{{title}}</h1>
+                <div class="article__image" style="background-image: url(http://lorempixel.com/620/205/nature/7)"></div>
 
-                {{{body}}}
+                <div class="layout">
+
+                    <div class="layout__item">
+                        <h1 class="article__title">{{title}}</h1>
+                    </div>
+
+                    <div class="article__content    layout__item  u-1-of-2-large-and-up">
+
+                        {{{body}}}
+
+                    </div>
+
+                    <div class="layout__item  u-1-of-2-large-and-up">
+                        {{> imageGallery }}
+                    </div>
+
+                </div>
 
             {{/article}}

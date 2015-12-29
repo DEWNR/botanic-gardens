@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #ARTICLE
+\*------------------------------------*/
+
+/*div*/.#{$sagovau-namespace}article {
+    font-size: $sagovau-font-size-base;
+}
+
+/*div*/.#{$sagovau-namespace}article__title {
+    @extend %#{$sagovau-namespace}alpha;
+}
+
+
+/*div*/.#{$sagovau-namespace}article__content {
+    font-size: $sagovau-font-size-base;
+}
+
+
+/*div*/.#{$sagovau-namespace}article__image { // Use a div instead of img to prevent download on mobile
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: $sagovau-spacing-unit-base;
+    display: block;
+    padding-bottom: (205 / 620) * 100%; // Manually calculated based on the required dimensions
+}
