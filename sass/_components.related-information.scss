@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #RELATED-INFORMATION
+\*------------------------------------*/
+
+/**
+ * Basic formatting for information that is tangentially related to the main
+ * page content, such as image galleries, links to other posts, references, etc.
+ */
+
+.#{$sagovau-namespace}related-information {
+    font-size: $sagovau-font-size-base;
+}
+
+    .#{$sagovau-namespace}related-information__group {
+        @extend %margin-bottom;
+        @extend %#{$sagovau-namespace}no-print;
+    }
+
+        .#{$sagovau-namespace}related-information__title {
+            @extend %beta;
+        }

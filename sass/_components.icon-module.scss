@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #ICON-MODULE
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series icon modules.
+ * Note that the "module" component can only be imported once, so importing it
+ * in multiple files does not cause duplication.
+ **/
+
+
+/*a*/.#{$sagovau-namespace}icon-module--internal {
+
+    border-bottom-width: 1px;
+
+    @include media-query(large-and-up) {
+        padding-bottom: 22%;
+    }
+
+}

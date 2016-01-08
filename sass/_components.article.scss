@@ -13,6 +13,10 @@
 
 /*div*/.#{$sagovau-namespace}article__content {
     font-size: $sagovau-font-size-base;
+
+    @include media-query(large-and-up) {
+        padding-right: $sagovau-spacing-unit-base * 3;
+    }
 }
 
 
@@ -22,5 +26,5 @@
     position: relative;
     margin-bottom: $sagovau-spacing-unit-base;
     display: block;
-    padding-bottom: (205 / 620) * 100%; // Manually calculated based on the required dimensions
+    padding-bottom: (202 / 620) * 100%; // Manually calculated based on the required dimensions
 }

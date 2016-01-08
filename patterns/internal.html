@@ -29,8 +29,6 @@
 
                             <div class="layout__item  u-2-of-3-large-and-up">
 
-                                {{> breadcrumbs }}
-
                                 <article class="article" role="article">
 
                                     <!-- normalTemplateStart -->
@@ -47,7 +45,23 @@
 
                             <aside class="related-information    layout__item  u-1-of-3-large-and-up" role="complementary">
 
-                                {{> iconModules }}
+                                <div class="related-information__group">
+                                    {{> iconModulesInternal }}
+                                </div>
+
+
+                                <div class="related-information__group">
+
+                                    <a class="cover-module  js-image-gallery-trigger" href="#">
+
+                                        <img class="cover-module__image" src="http://lorempixel.com/310/350/nature/4" alt="" />
+
+                                        <h3 class="cover-module__title">Image gallery</h3>
+                                    </a>
+
+                                </div><!-- /.related-information__group -->
+
+
 
                             </aside><!-- /layout__item -->
 

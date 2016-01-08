@@ -139,7 +139,6 @@
 @import "dewnr-series-three/sass/components.icon-module";
 @import "dewnr-series-three/sass/components.image-gallery";
 @import "dewnr-series-three/sass/components.primary-navigation";
-@import "dewnr-series-three/sass/components.related-information";
 @import "dewnr-series-three/sass/components.secondary-navigation";
 @import "dewnr-series-three/sass/components.social";
 @import "dewnr-series-three/sass/components.slider";
@@ -155,10 +154,13 @@
 /* == Botanic Gardens == */
 
 @import "components.article";
+@import "components.cover-module";
 @import "components.home";
+@import "components.icon-module";
 @import "components.landing-module";
-@import "components.site-footer";
 @import "components.page-shadow";
+@import "components.related-information";
+@import "components.site-footer";
 @import "components.small-module";
 @import "components.teaser-module";
 
