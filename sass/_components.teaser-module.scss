@@ -33,6 +33,11 @@
 
 }
 
+/*a*/.#{$sagovau-namespace}teaser-module--no-readmore {
+    padding-bottom: 0;
+}
+
+
     /*div*/.#{$sagovau-namespace}teaser-module__image {    // Use a div instead of img to prevent download on mobile
         background-repeat: no-repeat;
         background-size: cover;
@@ -40,7 +45,7 @@
         margin-bottom: $sagovau-spacing-unit-base;
         display: block;
         @include ui-link;       // Underline on hover/focus
-        padding-bottom: (100 / 620) * 100%; // Manually calculated based on the required dimensions
+        padding-bottom: (200 / 620) * 100%; // Manually calculated based on the required dimensions
 
         @include media-query(large-and-up) {
             height: 0;
@@ -51,27 +56,31 @@
             padding-bottom: (125 / 620) * 100%; // Manually calculated based on the required dimensions
         }
 
+        /*a*/.#{$sagovau-namespace}teaser-module--no-readmore & {
+            &:focus,
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
     }
 
     /*h2*/.#{$sagovau-namespace}teaser-module__title {
         @extend %#{$sagovau-namespace}module__title;
         text-decoration: none;
+        background-color: #000;  // Fallback for non-RGBA browsers
+        background-color: rgba(0, 0, 0, 0.7);
+        border-bottom-style: none;
+        bottom: 0;
+        color: $sagovau-color-text-reverse;
+        left: 0;
+        padding: $sagovau-spacing-unit-base--small;
+        position: absolute;
+        width: 100%;
 
         &:focus,
         &:hover {
             text-decoration: inherit;
-        }
-
-        @include media-query(large-and-up) {
-            background-color: #000;  // Fallback for non-RGBA browsers
-            background-color: rgba(0, 0, 0, 0.7);
-            border-bottom-style: none;
-            bottom: 0;
-            color: $sagovau-color-text-reverse;
-            left: 0;
-            padding: $sagovau-spacing-unit-base--small;
-            position: absolute;
-            width: 100%;
         }
 
         /*div*/.#{$sagovau-namespace}teaser-module__image & {
