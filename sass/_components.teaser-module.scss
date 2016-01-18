@@ -39,6 +39,7 @@
 
 
     /*div*/.#{$sagovau-namespace}teaser-module__image {    // Use a div instead of img to prevent download on mobile
+        background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -53,7 +54,7 @@
         }
 
         @include media-query(huge) {
-            padding-bottom: (125 / 620) * 100%; // Manually calculated based on the required dimensions
+            padding-bottom: (155 / 620) * 100%; // Manually calculated based on the required dimensions
         }
 
         /*a*/.#{$sagovau-namespace}teaser-module--no-readmore & {
@@ -69,7 +70,7 @@
         @extend %#{$sagovau-namespace}module__title;
         text-decoration: none;
         background-color: #000;  // Fallback for non-RGBA browsers
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.5);
         border-bottom-style: none;
         bottom: 0;
         color: $sagovau-color-text-reverse;

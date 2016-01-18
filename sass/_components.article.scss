@@ -21,10 +21,11 @@
 
 
 /*div*/.#{$sagovau-namespace}article__image { // Use a div instead of img to prevent download on mobile
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     margin-bottom: $sagovau-spacing-unit-base;
     display: block;
-    padding-bottom: (202 / 620) * 100%; // Manually calculated based on the required dimensions
+    padding-bottom: (155 / 620) * 100%; // Manually calculated based on the required dimensions
 }
