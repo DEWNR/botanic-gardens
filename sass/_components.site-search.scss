@@ -7,10 +7,10 @@
  */
 
 
- /*input[type=text]*/.#{$sagovau-namespace}site-search__input--submit {
+/*input[type=text]*/.#{$sagovau-namespace}site-search__input--submit {
 
-     @include media-query($sagovau-site-search-breakpoint) {
-         right: $sagovau-spacing-unit-base--small;
-     }
+    @include media-query($sagovau-site-search-breakpoint) {
+        right: $sagovau-spacing-unit-base - 5;
+    }
 
  }
