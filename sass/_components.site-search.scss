@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #SITE-SEARCH
+\*------------------------------------*/
+
+/**
+ * Styling for the Alpha series site search.
+ */
+
+
+ /*input[type=text]*/.#{$sagovau-namespace}site-search__input--submit {
+
+     @include media-query($sagovau-site-search-breakpoint) {
+         right: $sagovau-spacing-unit-base--small;
+     }
+
+ }
