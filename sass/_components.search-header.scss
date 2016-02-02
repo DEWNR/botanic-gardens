@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #SITE-HEADER
+\*------------------------------------*/
+
+.search-header__item {
+    background: #e3e5e6;
+    padding: 1.2em 0.2em 2.2em;
+    margin-bottom: $sagovau-spacing-unit-base;
+}
+
+.search-header__item--label {
+    float: left;
+}
+
+.search-header__item--nav {
+    float: right;
+
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
