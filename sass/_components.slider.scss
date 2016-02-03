@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #SLIDER
+\*------------------------------------*/
+
+
+/*div*/.#{$sagovau-namespace}slider {
+    margin: 0 0 $sagovau-spacing-unit-base;
+
+    @include media-query(large-and-up) {
+        margin-bottom: $sagovau-spacing-unit-base;
+    }
+}

@@ -1,3 +1,8 @@
+/*------------------------------------*\
+    #SMALL-MODULE
+\*------------------------------------*/
+
+
 /*div*/.#{$sagovau-namespace}small-module__image { // Use a div instead of img to prevent download on mobile
 
     @include media-query(large-and-up) {
@@ -19,4 +24,10 @@
         }
     }
 
+}
+
+/*a*/.#{$sagovau-namespace}small-module--separated {
+    @include media-query(large-and-up) {
+        margin: 1.5 * $sagovau-spacing-unit-base 0 $sagovau-spacing-unit-base;
+    }
 }
