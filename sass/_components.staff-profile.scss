@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #STAFF-PROFILE
+\*------------------------------------*/
+
+
+/*div*/.#{$sagovau-namespace}staff-profile {
+}
+
+/*div*/.#{$sagovau-namespace}staff-profile__content {
+}
+
+/*h2*/.#{$sagovau-namespace}staff-profile__name {
+}
+
+/*div*/.#{$sagovau-namespace}staff-profile__image {
+    margin-bottom: $sagovau-spacing-unit-base;
+
+    @include media-query(large-and-up) {
+        float: left;
+        margin-bottom: $sagovau-spacing-unit-base / 2;
+        margin-right: $sagovau-spacing-unit-base;
+        width: 20%;
+    }
+
+}
+
+/*div*/.#{$sagovau-namespace}staff-profile__position {
+
+    font-weight: bolder;
+    margin-top: -$sagovau-spacing-unit-base;
+    margin-bottom: $sagovau-spacing-unit-base;
+
+}
