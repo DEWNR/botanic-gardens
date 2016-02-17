@@ -6,7 +6,7 @@
  * Styling for the Botanic Gardens home page.
  **/
 
-/*main*/.#{$sagovau-namespace}home {
+/*main*/.#{$sagovau-namespace}box--home {
 
     @include media-query(large-and-up) {
         padding-bottom: 0;
