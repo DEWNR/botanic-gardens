@@ -19,7 +19,7 @@
     @extend %#{$sagovau-namespace}module;
     border: 0;
     margin-bottom: $sagovau-spacing-unit-base;
-    padding-bottom: $sagovau-spacing-unit-base;
+    padding-bottom: 0;
     border-bottom: 1px dotted $sagovau-color-brand;
 
     &:focus,
@@ -92,18 +92,4 @@
 
     /*a*/.#{$sagovau-namespace}teaser-module__readmore {
         font-weight: bold;
-        margin-left: $sagovau-spacing-unit-base;
-
-        &::before {
-            background-image: url(#{$sagovau-path-svg}#{$sagovau-file-prefix}-circle-arrow.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            content: "";
-            display: inline-block;
-            height: $sagovau-font-size-base;
-            margin-left: -$sagovau-spacing-unit-base;
-            margin-right: $sagovau-spacing-unit-base - $sagovau-font-size-base;
-            vertical-align: middle;
-            width: $sagovau-font-size-base;
-        }
     }
