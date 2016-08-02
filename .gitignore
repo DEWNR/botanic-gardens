@@ -2,4 +2,5 @@
 *.log
 node_modules/
 temp/
-dist/
+public/
+src/data/global.json
