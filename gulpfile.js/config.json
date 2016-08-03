@@ -41,8 +41,8 @@
       "dest": "./",
       "partialData": ["html", "json"],
       "dataFiles": ["./node_modules/dewnr-series-three/src/html/data/*.json", "./src/html/data/*.json", "!**/global.json"],
-      "templatePaths": ["./node_modules/dewnr-series-three/src/html", "./src/html"],
-      "templateFiles": ["./node_modules/dewnr-series-three/src/html/**/*.nunjucks", "./src/html/**/*.nunjucks","!**/{layouts,shared,macros,data}/**"],
+      "templatePaths": ["./src/html", "./node_modules/dewnr-series-three/src/html"],
+      "templateFiles": ["./src/html/**/*.nunjucks", "./node_modules/dewnr-series-three/src/html/**/*.nunjucks", "!**/{layouts,shared,macros,data}/**"],
       "htmlmin": {
         "collapseWhitespace": true
       },

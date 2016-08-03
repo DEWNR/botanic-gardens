@@ -13,7 +13,7 @@
 
     .#{$sagovau-namespace}related-information__group {
         @extend %margin-bottom;
-        @extend %#{$sagovau-namespace}no-print;
+        @extend %#{$sagovau-namespace}no-print !optional;
     }
 
         .#{$sagovau-namespace}related-information__title {

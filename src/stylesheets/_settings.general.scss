@@ -8,7 +8,7 @@
 
 // Import the series settings
 
-@import "dewnr-series-three/sass/settings.general";
+@import 'dewnr-series-three/src/stylesheets/settings.general';
 
 
 
@@ -16,13 +16,16 @@
 
 /* = File locations and prefixes = */
 
-$sagovau-file-prefix: "bg";
+$sagovau-file-prefix: 'bg';
 
-$sagovau-path-png: "";
-$sagovau-path-svg: "";
+$sagovau-path-png: '../images/';
+$sagovau-path-svg: '../images/';
+
+
+
 
 
 /* = Colours = */
 
-$sagovau-color-brand: #00675e;
+$sagovau-color-brand:   #00675e;
 $sagovau-color-brand-secondary: #9e948b;

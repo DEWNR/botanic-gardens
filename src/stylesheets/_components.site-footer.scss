@@ -2,6 +2,9 @@
     #SITE-FOOTER
 \*------------------------------------*/
 
+@import 'dewnr-series-three/src/stylesheets/components.site-footer';
+
+
 /*div*/.#{$sagovau-namespace}site-footer__disclaimer {
     background-color: tint($sagovau-color-brand, 13%);
 }

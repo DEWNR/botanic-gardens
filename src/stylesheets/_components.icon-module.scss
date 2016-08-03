@@ -2,11 +2,7 @@
     #ICON-MODULE
 \*------------------------------------*/
 
-/**
- * Styling for the Alpha series icon modules.
- * Note that the "module" component can only be imported once, so importing it
- * in multiple files does not cause duplication.
- **/
+@import 'dewnr-series-three/src/stylesheets/components.icon-module';
 
 
 /*a*/.#{$sagovau-namespace}icon-module--internal {

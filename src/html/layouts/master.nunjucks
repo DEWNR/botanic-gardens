@@ -1,0 +1,115 @@
+{% from 'macros/helpers.nunjucks' import sprite %}
+
+{% set image_path = 'images/' %}
+{% set share_path = 'http://www.environment.sa.gov.au/files/templates/00000000-0000-0000-0000-000000000000/f88a7f3c-df7e-430a-825c-24cfa8dec9a8/' %}
+{% set site_prefix = 'bg' %}
+{% set site_url = 'http://www.environment.sa.gov.au' %}
+
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Department of Environment, Water and Natural Resources (DEWNR){% endblock %}</title>
+
+
+    <!-- Scripts -->
+
+    <!-- Avoid using unnecessary scripts in here; add them to the end of the body. If this can't be avoided, use inline or asynchronous scripts. -->
+
+    <script type="text/javascript">
+
+        /* Set site variables */
+
+        window.SITE_OPTIONS = {
+            brandColour: "#002855",
+            sharedFiles: "{{ share_path }}",
+            sitePrefix: "{{ site_prefix }}",
+            siteFiles: "http://www.environment.sa.gov.au/files/templates/00000000-0000-0000-0000-000000000000/1db5bad3-dbd8-4ea2-93e6-659348712e07/"
+        };
+
+    </script>
+
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/e0cc203f-7221-4daf-a2d5-815483dba107.js" async></script>
+
+    <script src="js/S3-prepare.js" inline></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Stylesheets -->
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <noscript>
+
+      <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/e0cc203f-7221-4daf-a2d5-815483dba107.css">
+
+    </noscript>
+
+    <!-- End Stylesheets -->
+
+    {% block head %}{% endblock %}
+
+</head>
+<body>
+
+
+    <div class="wrapper  wrapper--large-and-up-ph-small    page-shadow">
+
+
+        {% include "shared/site-header.nunjucks" %}
+
+
+        <!-- Main content -->
+
+        <main class="box  box--small" role="main">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <!-- End main content -->
+
+
+        {% include "shared/site-footer.nunjucks" %}
+
+
+    </div><!-- /.wrapper -->
+
+
+    {% block javascript %}
+
+        <!-- jQuery -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- Local fallback -->
+
+        <script>window.jQuery || document.write('<script src="/files/templates/00000000-0000-0000-0000-000000000000/f88a7f3c-df7e-430a-825c-24cfa8dec9a8/jquery1111min.js">\x3C/script>')</script>
+
+        <!-- End local fallback -->
+
+        <!-- End jQuery -->
+
+
+        <!-- Progressive enhancement -->
+
+        <script src="js/S3-enhance.js" type="text/javascript"></script>
+
+        <!-- End progressive enhancement -->
+
+    {% endblock %}
+
+
+</body>
+</html>

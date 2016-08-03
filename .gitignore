@@ -3,4 +3,4 @@
 node_modules/
 temp/
 public/
-src/data/global.json
+src/html/data/global.json
