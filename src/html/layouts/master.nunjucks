@@ -73,7 +73,7 @@
 
         <!-- Main content -->
 
-        <main class="box  box--small" role="main">
+        <main class="box {% block boxClass %}{% endblock %}" role="main">
             {% block content %}
             {% endblock %}
         </main>

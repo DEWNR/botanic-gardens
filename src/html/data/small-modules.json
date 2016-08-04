@@ -4,42 +4,42 @@
         "title": "What's happening",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "class": "",
-        "image": "http://lorempixel.com/160/160/nature/7",
+        "image": "http://placehold.it/160x160",
         "href": "#"
     },{
         "index": "1",
         "title": "Latest blog",
         "text": "Proin posuere turpis felis, vel dapibus sem vulputate non.",
         "class": "",
-        "image": "http://lorempixel.com/160/160/nature/8",
+        "image": "http://placehold.it/160x160",
         "href": "#"
     },{
         "index": "2",
         "title": "Fundraising",
         "text": "Etiam convallis ante eget augue ullamcorper.",
         "class": "",
-        "image": "http://lorempixel.com/160/160/nature/3",
+        "image": "http://placehold.it/160x160",
         "href": "#"
     },{
         "index": "3",
         "title": "Dolore magna aliqua",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "class": "",
-        "image": "http://lorempixel.com/160/160/nature/7",
+        "image": "http://placehold.it/160x160",
         "href": "#"
     },{
         "index": "4",
         "title": "Ut enim ad minim",
         "text": "Proin posuere turpis felis, vel dapibus sem vulputate non.",
         "class": "",
-        "image": "http://lorempixel.com/160/160/nature/8",
+        "image": "http://placehold.it/160x160",
         "href": "#"
     },{
         "index": "5",
         "title": "Exercitation ullamco",
         "text": "Etiam convallis ante eget augue ullamcorper.",
         "class": "",
-        "image": "http://lorempixel.com/160/160/nature/3",
+        "image": "http://placehold.it/160x160",
         "href": "#"
     }
 ]

@@ -135,7 +135,9 @@
 
 /* == Series three == */
 
+@import 'dewnr-series-three/src/stylesheets/components.action-module';
 @import 'dewnr-series-three/src/stylesheets/components.feature-module';
+@import 'dewnr-series-three/src/stylesheets/components.icon-module';
 @import 'dewnr-series-three/src/stylesheets/components.image-gallery';
 @import 'dewnr-series-three/src/stylesheets/components.primary-navigation';
 @import 'dewnr-series-three/src/stylesheets/components.secondary-navigation';
@@ -143,15 +145,14 @@
 @import 'dewnr-series-three/src/stylesheets/components.sitemap';
 @import 'dewnr-series-three/src/stylesheets/components.spotlight';
 @import 'dewnr-series-three/src/stylesheets/components.navigation-tile';
+@import 'dewnr-series-three/src/stylesheets/components.teaser-module';
 
 
 /* == Botanic Gardens == */
 
-@import 'components.action-module';
 @import 'components.article';
 @import 'components.cover-module';
 @import 'components.home';
-@import 'components.icon-module';
 @import 'components.landing-module';
 @import 'components.page-shadow';
 @import 'components.related-information';

@@ -1,0 +1,62 @@
+{% extends 'layouts/master.nunjucks' %}
+
+{% block boxClass %}  box--home{% endblock %}
+
+
+
+{% block content %}
+
+
+    <!-- Spotlight content -->
+
+    <div class="slider    js-slider">
+
+        {% include "shared/spotlight.nunjucks" %}
+
+    </div>
+
+    <!-- End spotlight content -->
+
+
+
+
+
+    <div class="layout  layout--small">
+
+
+        <div class="layout__item  u-1-of-1  u-3-of-4-huge">
+
+            {% include "shared/feature-modules.nunjucks" %}
+
+            {% include "shared/small-modules.nunjucks" %}
+
+        </div><!-- /.layout__item -->
+
+
+
+
+
+        <div class="layout__item  u-1-of-1  u-1-of-4-huge">
+
+            <hr class="u-hidden  u-display-block-large-and-up  u-hidden-huge    u-mb0">
+
+            {% include "shared/icon-modules.nunjucks" %}
+
+            {# {% include "shared/action-modules.nunjucks" %} #}
+
+        </div><!-- /.layout__item -->
+
+
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+{% block javascript %}
+    {{ super() }}
+{% endblock %}
