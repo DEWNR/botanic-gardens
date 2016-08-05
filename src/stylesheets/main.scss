@@ -136,6 +136,7 @@
 /* == Series three == */
 
 @import 'dewnr-series-three/src/stylesheets/components.action-module';
+@import 'dewnr-series-three/src/stylesheets/components.article';
 @import 'dewnr-series-three/src/stylesheets/components.feature-module';
 @import 'dewnr-series-three/src/stylesheets/components.icon-module';
 @import 'dewnr-series-three/src/stylesheets/components.image-gallery';
@@ -152,12 +153,7 @@
 
 /* == Botanic Gardens == */
 
-@import 'components.article';
-@import 'components.cover-module';
 @import 'components.home';
-@import 'components.landing-module';
-@import 'components.page-shadow';
-@import 'components.search-header';
 @import 'components.site-search';
 @import 'components.site-footer';
 @import 'components.site-header';
