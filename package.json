@@ -18,7 +18,7 @@
     "demo": "gulp production && gulp server"
   },
   "dependencies": {
-    "dewnr-series-three": "^0.2.6"
+    "dewnr-series-three": "^0.3.0"
   },
   "devDependencies": {
     "browser-sync": "2.11.1",
