@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #NAVIGATION-TILE
+\*------------------------------------*/
+
+@import 'dewnr-series-three/src/stylesheets/components.navigation-tile';
+
+/*div*/.#{$sagovau-namespace}navigation-tile {
+    position: relative;
+}
+
+/*div*/.#{$sagovau-namespace}navigation-tile__label {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: inline-block;
+    background: #eee;
+    z-index: 100;
+    height: 25px;
+    font-weight: bold;
+    line-height: 25px;
+    padding: 0 18px;
+}
