@@ -12,3 +12,20 @@
         margin-bottom: $sagovau-spacing-unit-base;
     }
 }
+
+/*div*/.#{$sagovau-namespace}spotlight__text {
+    @include media-query(huge) {
+        width: 550px;
+        padding-right: 0;
+
+        p {
+            padding-right: 100px;
+        }
+    }
+}
+
+/*div*/.#{$sagovau-namespace}spotlight__header {
+    @include media-query(huge) {
+        padding-right: 190px;
+    }
+}
