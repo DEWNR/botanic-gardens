@@ -1,0 +1,25 @@
+
+{% set map = {
+    key: 'AIzaSyAWGZQdgDEEW0wNY0LfD2NULZI2_bntVP8',
+    lng: -34.917367,
+    lat: 138.609992,
+    zoom: 12
+} %}
+<div class="related-information__group">
+
+    <h2 class="related-information__title">Location</h2>
+
+    <div class="fixed-aspect-ratio   fixed-aspect-ratio--1x1">
+        <iframe class="fixed-aspect-ratio__content" frameborder="0" allowfullscreen="" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{map.lng}},{{map.lat}}+&amp;key={{map.key}}+&amp;zoom={{map.zoom}}" ></iframe>
+    </div>
+
+  </ul>
+
+</div>
+{# https://www.google.com/maps/embed/v1/place?q=-35.145477,138.5785801+&amp;zoom=7 #}
+
+<ItemData DataDefinition="PrimarySiteLocationLat" Template="default" />
+<ItemData DataDefinition="PrimarySiteLocationLong" Template="default" />
+<ItemData DataDefinition="GoogleMapsZoom" Template="default" />
+
+<iframe class="fixed-aspect-ratio__content" frameborder="0" allowfullscreen="" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<ItemData DataDefinition="PrimarySiteLocationLat" Template="default" />,<ItemData DataDefinition="PrimarySiteLocationLong" Template="default" />+&amp;key=AIzaSyAWGZQdgDEEW0wNY0LfD2NULZI2_bntVP8+&amp;zoom=<ItemData DataDefinition="GoogleMapsZoom" Template="default" />" ></iframe>
